@@ -1,0 +1,26 @@
+
+<table id="products" class="display" data-source="<%= products_url(format: "json") %>">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.category %></td>
+    <td><%= product.price %></td>
+    
+  </tr>
+<% end %>
+<%= link_to 'New Product', new_product_path %>
+</table>
+
+
+
+
+
+
+
